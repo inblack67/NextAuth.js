@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Preloader from './Preloader';
 import { Fragment } from 'react';
 import { useSession, signIn, signOut } from 'next-auth/client';
+import axios from 'axios';
 
 const Navbar = () => {
   const [session, loading] = useSession();

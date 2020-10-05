@@ -1,9 +1,5 @@
-import axios from 'axios';
 import NextAuth from 'next-auth';
 import Providers from 'next-auth/providers';
-import { connectDB } from '../../../src/connectDB';
-
-connectDB();
 
 export default (req, res) =>
   NextAuth(req, res, {
