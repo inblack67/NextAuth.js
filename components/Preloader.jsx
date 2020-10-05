@@ -1,8 +1,8 @@
 const Preloader = () => {
   return (
     <div id='preloader' className='container center'>
-      <div class='progress'>
-        <div class='indeterminate'></div>
+      <div className='progress'>
+        <div className='indeterminate'></div>
       </div>
     </div>
   );

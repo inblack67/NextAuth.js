@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Preloader from './Preloader';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { useSession, signIn, signOut } from 'next-auth/client';
 import axios from 'axios';
 
@@ -12,22 +12,14 @@ const Navbar = () => {
       <li>
         <div>
           {session && session.user && (
-            <div id='image-card'>
+            <Fragment>
               Welcome <span className='red-text'>{session.user.name}</span>
-              <img
-                src={session.user.image}
-                alt={session.user.name}
-                className='responsive-img circle secondary-content'
-                style={{ height: '30px' }}
-              />
-            </div>
+            </Fragment>
           )}
         </div>
       </li>
       <li>
-        <a className='red-text' onClick={signOut}>
-          Logout
-        </a>
+        <a onClick={signOut}>Logout</a>
       </li>
       <li>
         <Link href='/about'>
@@ -40,9 +32,7 @@ const Navbar = () => {
   const guestLinks = (
     <Fragment>
       <li>
-        <a className='red-text' onClick={() => signIn('github')}>
-          Sign In With Github
-        </a>
+        <a onClick={() => signIn('github')}>Sign In With Github</a>
       </li>
       <li>
         <Link href='/about'>
