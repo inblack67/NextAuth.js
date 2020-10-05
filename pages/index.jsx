@@ -5,7 +5,7 @@ const index = () => {
   const [session, loading] = useSession();
 
   if (loading) {
-    return <Preloader />;
+    return <p className='flow-text center'>Loading...</p>;
   }
 
   return (
