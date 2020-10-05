@@ -1,21 +1,11 @@
-
-
 const Preloader = () => {
-    return (
-        <div id='preloader'>
-            <div className="preloader-wrapper active">
-                <div className="spinner-layer spinner-red-only">
-                    <div className="circle-clipper left">
-                        <div className="circle"></div>
-                    </div><div className="gap-patch">
-                        <div className="circle"></div>
-                    </div><div className="circle-clipper right">
-                        <div className="circle"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div id='preloader' className='container center'>
+      <div class='progress'>
+        <div class='indeterminate'></div>
+      </div>
+    </div>
+  );
+};
 
-export default Preloader
+export default Preloader;
