@@ -1,15 +1,17 @@
-body{
-    background-color: black;
-    color: white;
+body {
+  background: black;
+  color: white;
 }
 
-input, label, textarea{
-    color: white;
+input,
+label,
+textarea {
+  color: white;
 }
 
-#preloader{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+#preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
 }
